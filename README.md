@@ -3,7 +3,13 @@
 Keep your FleekSite site's code in git, and deploy app builds (React, Vite, Astro, Next.js static export) to FleekSite.
 
 ```bash
-npm install -g github:fleeksite/cli
+npm install -g https://github.com/fleeksite/cli/archive/refs/tags/v0.1.0.tar.gz
+```
+
+In a GitHub Action or script without a global install:
+
+```bash
+npx --yes https://github.com/fleeksite/cli/archive/refs/tags/v0.1.0.tar.gz deploy ./dist --site https://yoursite.fleeksite.com
 ```
 
 Requires Node 20 or newer.
