@@ -4,17 +4,32 @@
   "description": "Keep a FleekSite site's code in git, and deploy static app builds to FleekSite.",
   "license": "MIT",
   "type": "module",
-  "bin": { "fleek": "dist/main.js" },
+  "bin": {
+    "fleek": "dist/main.js"
+  },
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
-  "exports": { ".": { "types": "./dist/index.d.ts", "import": "./dist/index.js" } },
-  "files": ["dist", "README.md", "LICENSE"],
-  "engines": { "node": ">=20" },
-  "repository": { "type": "git", "url": "git+https://github.com/fleeksite/cli.git" },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fleeksite/cli.git"
+  },
   "homepage": "https://github.com/fleeksite/cli#readme",
   "scripts": {
     "build": "tsc -p tsconfig.build.json",
-    "prepare": "npm run build",
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
     "fleek": "tsx src/main.ts"
